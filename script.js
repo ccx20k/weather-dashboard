@@ -23,8 +23,8 @@ function searchCity(cityName = "Toronto") {
         method: "GET"
     }).then(function (response) {
 
-        $("#citydiv").text = capitalize(cityName);
-        $("#citydiv").text = response.main[3];
+        $("#city-name").text = capitalize(cityName);
+        $("#").text = response.main[3];
         
         console.log(response);
     });
