@@ -25,12 +25,12 @@ function searchCity(cityName = "Toronto") {
 
         const cityText = capitalize(cityName);
         $("#city-name").text(cityText);
-        $('#temp').text(respone.main[0]);
+        $('#temp').text("Temperature: " + response.main.temp + " °C");
         $('humidity').text();
         $('#windspeed').text();
         $('#UV').text();
         
-        console.log(response);
+        console.log(response.main);
     });
 
 
