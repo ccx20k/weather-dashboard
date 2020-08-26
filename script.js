@@ -4,12 +4,12 @@ var APIKey = "d912b93f7c4be8f3004a1be355cd20fa";
 // the everything button
 $("#search-btn").on("click", function () {
 
-    var cityName = $("#city-name").val();
+    var cityName = $("#city-name").val();// gets the value of the input for city name id
     searchCity(cityName);
 
     //save searched city names 
 
-    localStorage.setItem("city", "")
+    localStorage.setItem("city", "");
 });
 
 function capitalize(string) {
