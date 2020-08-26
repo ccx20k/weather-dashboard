@@ -38,9 +38,10 @@ function searchCity(cityName = "Toronto") {
                 method: "GET"
             }).then(function(response){
                 console.log(response); 
-
+                $('#UV').text("UV Index: " + response.value)
             })
         }
+        
     getUVIndex()
     
     });
