@@ -8,7 +8,6 @@ $("#search-btn").on("click", function () {
 
     //save searched city names 
 
-
     localStorage.setItem("city", "")
 })
 
@@ -26,11 +25,10 @@ function searchCity(cityName = "Toronto") {
         const cityText = capitalize(cityName);
         $("#city-name").text(cityText);
         $('#temp').text("Temperature: " + response.main.temp + " °C");
-        $('humidity').text();
-        $('#windspeed').text();
+        $('#humidity').text("Humidity: " + response.main.humidity);
+        $('#windspeed').text("Windspeed: " + Math.round(response.wind.speed * 3.6) + "km/h");
         $('#UV').text();
-        
-        console.log(response.main);
+    
     });
 
 
